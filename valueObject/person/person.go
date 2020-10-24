@@ -1,4 +1,4 @@
-package valueObject
+package person
 
 import "github.com/WB3Tech-Go/kernel/strings"
 
@@ -7,7 +7,7 @@ type Person struct {
 	lastName string
 }
 
-func NewPerson(firstName, lastName string) *Person {
+func New(firstName, lastName string) *Person {
 	return &Person{
 		fistName: strings.CleanString(firstName),
 		lastName: strings.CleanString(lastName),
