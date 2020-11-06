@@ -1,19 +1,18 @@
 package repetition
 
-import "github.com/WB3Tech-Go/kernel/valueObject/measure"
+import (
+	"github.com/WB3Tech-Go/kernel/valueObject/measure"
+	"github.com/WB3Tech-Go/kernel/valueObject/measure/tally"
+)
 
 type Repetition struct {
 	measure.Measure
-	count int
+	tally.Tally
 }
 
 func New(count int) *Repetition {
 	return &Repetition{
 		*measure.New("repetition", "rep"),
-		count,
+		*tally.New(count),
 	}
-}
-
-func (r *Repetition) Count() int {
-	return r.count
 }

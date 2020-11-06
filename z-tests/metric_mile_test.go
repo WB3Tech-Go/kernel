@@ -10,6 +10,6 @@ func TestNewMile(t *testing.T) {
 
 	if mi.Name() != "mile" { t.Error("The metric name should be 'mile'.")}
 	if mi.Abbreviation() != "mi" { t.Error("The metric abbreviation should be 'mi'")}
-	if mi.Quantity() != 1.00 { t.Error("The kilometer quantity should be 1.00.")}
+	if mi.Quantity() != 1.00 { t.Error("The kilometer amount should be 1.00.")}
 }
 

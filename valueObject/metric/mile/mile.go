@@ -1,19 +1,18 @@
 package mile
 
-import "github.com/WB3Tech-Go/kernel/valueObject/measure"
+import (
+	"github.com/WB3Tech-Go/kernel/valueObject/measure"
+	"github.com/WB3Tech-Go/kernel/valueObject/measure/amount"
+)
 
 type Mile struct {
 	measure.Measure
-	quantity float64
+	amount.Amount
 }
 
 func New(quantity float64) *Mile {
 	return &Mile{
 		*measure.New("mile", "mi"),
-		quantity,
+		*amount.New(quantity),
 	}
-}
-
-func (q *Mile) Quantity() float64 {
-	return q.quantity
 }

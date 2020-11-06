@@ -1,19 +1,18 @@
 package kilometer
 
-import "github.com/WB3Tech-Go/kernel/valueObject/measure"
+import (
+	"github.com/WB3Tech-Go/kernel/valueObject/measure"
+	"github.com/WB3Tech-Go/kernel/valueObject/measure/amount"
+)
 
 type Kilometer struct {
 	measure.Measure
-	quantity float64
+	amount.Amount
 }
 
 func New(quantity float64) *Kilometer {
 	return &Kilometer{
 		*measure.New("kilometer", "km"),
-		quantity,
+		*amount.New(quantity),
 	}
-}
-
-func (k *Kilometer) Quantity() float64 {
-	return k.quantity
 }
