@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func CreateNewPersonObject(t *testing.T) {
+func TestCreateNewPersonObject(t *testing.T) {
 
 	per := person.New("Bill", "Bensing")
 
@@ -15,7 +15,7 @@ func CreateNewPersonObject(t *testing.T) {
 
 }
 
-func TwoPersonWithSameNameMustEqual(t *testing.T)  {
+func TestTwoPersonWithSameNameMustEqual(t *testing.T)  {
 
 	per1 := person.New("Bill", "Bensing")
 	per2 := person.New("Bill", "Bensing")
@@ -24,11 +24,11 @@ func TwoPersonWithSameNameMustEqual(t *testing.T)  {
 
 }
 
-func TwoPersonWithDifferentNameMustNotEqual(t *testing.T)  {
+func TestTwoPersonWithDifferentNameMustNotEqual(t *testing.T)  {
 
 	per1 := person.New("Bill", "Bensing")
 	per2 := person.New("Bill-2", "Bensing-2")
 
-	if !per1.Equals(*per2) { t.Error("Two person instances with different names must not equal each other.")}
+	if per1.Equals(*per2) { t.Error("Two person instances with different names must not equal each other.")}
 
 }

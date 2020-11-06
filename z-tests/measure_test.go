@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func CreteNewMeasure(t *testing.T) {
+func TestCreteNewMeasure(t *testing.T) {
 
 	mes := measure.New("mile", "mi")
 
@@ -14,7 +14,7 @@ func CreteNewMeasure(t *testing.T) {
 
 }
 
-func SameMeasureEqualEachOther(t *testing.T) {
+func TestSameMeasureEqualEachOther(t *testing.T) {
 
 	mes1 := measure.New("mile", "mi")
 	mes2 := measure.New("mile", "mi")
@@ -23,7 +23,7 @@ func SameMeasureEqualEachOther(t *testing.T) {
 
 }
 
-func DifferingMeasureNameMustNoBeEqual(t *testing.T) {
+func TestDifferingMeasureNameMustNoBeEqual(t *testing.T) {
 
 	mes1 := measure.New("mile", "mi")
 	mes2 := measure.New("mile-diff", "mi")
@@ -32,7 +32,7 @@ func DifferingMeasureNameMustNoBeEqual(t *testing.T) {
 
 }
 
-func DifferingMeasureAbbreviationMustNoBeEqual(t *testing.T) {
+func TestDifferingMeasureAbbreviationMustNoBeEqual(t *testing.T) {
 
 	mes1 := measure.New("mile", "mi")
 	mes2 := measure.New("mile", "mi-diff")
