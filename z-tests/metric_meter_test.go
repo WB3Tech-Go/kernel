@@ -8,6 +8,8 @@ import (
 func TestNewMetric(t *testing.T) {
 	mtr := meter.New(200)
 
+	if mtr.Name() != "meter" { t.Error("The name must be 'meter'")}
+	if mtr.Abbreviation() != "m" { t.Error("The name must be 'meter'")}
 	if mtr.Quantity() != 200 { t.Error("The meter quantity must be 200.")}
 }
 
