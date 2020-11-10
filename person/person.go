@@ -14,7 +14,7 @@ func New(firstName, lastName string) *Person {
 	}
 }
 
-func (p *Person) FirstName() string  {
+func (p *Person) FirstName() string {
 	return p.fistName
 }
 

@@ -3,7 +3,7 @@ package measure
 import "github.com/WB3Tech-Go/kernel/strings"
 
 type Measure struct {
-	name string
+	name         string
 	abbreviation string
 }
 

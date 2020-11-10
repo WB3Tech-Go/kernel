@@ -10,7 +10,9 @@ type Username struct {
 }
 
 func New(username string) (*Username, error) {
-	if len(username) < 3 { return &Username{}, errors.New("hello") }
+	if len(username) < 3 {
+		return &Username{}, errors.New("hello")
+	}
 	return &Username{
 		value: strings.CleanString(username),
 	}, nil
